@@ -123,6 +123,7 @@ The cool tokens do not need the same treatment: `cyan` and `blue` already sit ne
 - `backgrounds/` — nine wallpapers (below).
 - `preview.png` and `palette-check.png` — the images on this page.
 - `unlock.png` — the lock-screen wordmark, consumed as `logo.png` by the optional `lock-explorer` Plymouth plugin. Stock Omarchy ignores it.
+- `shots/` — six screenshots of the theme in use (below).
 
 Nothing in the repository executes on your machine: no `.lua`, no terminal configs (`alacritty.toml`, `foot.ini`, `ghostty.conf`, `kitty.conf`), no `vscode.json`. When `omarchy theme install` clones a theme it keeps only the color files, and Omarchy regenerates everything else from `colors.toml` — so those files are intentionally absent here.
 
@@ -147,6 +148,34 @@ One compositor value is themed: `hyprland_active_border`, a 45° sky-to-white gr
 Each wallpaper is drawn from the theme palette itself — the same Prussian blues and white line work as the desktop — so bars and terminals sit on them without contrast surprises.
 
 All nine are 2912×1632. The three contour plats carry the most line work and ship as WebP (0.5–0.7 MB each); the rest are JPEG at quality 95 with full chroma, which keeps the halftone shading and paper grain smooth. The set weighs about 10.5 MB in total — everyone who installs the theme clones all of it, so the heaviest scenes are the ones compressed. Cycle between them with **Super+Ctrl+Space**. Your own images dropped into `~/.config/omarchy/backgrounds/blueprints/` appear alongside the shipped set.
+
+## The theme in use
+
+Captured from a live install — the same palette across editors, terminal chrome and the shell. One redaction: the bar's centre title slot is blurred, because on the machine these were taken on it mirrors a browser tab title. Nothing else in frame is personal. The six shots are 1920×1080 WebP and add about 600 KB to the clone.
+
+![Two editors over the rolling-hills plat](shots/01-plat-editors.webp)
+
+*Two editors over the rolling-hills plat — Python and the theme's own `colors.toml`.*
+
+![Full-screen editor on the drafting-grid sheet](shots/02-syntax-hero.webp)
+
+*The drafting-grid sheet behind one full-screen editor: the eight chromatics in a single glance.*
+
+![colors.toml beside the generated Alacritty colors](shots/03-config-split.webp)
+
+*Config as content — `colors.toml` beside the generated Alacritty terminal colors, on the empty mechanical plan.*
+
+![Valley plat with a themed notification](shots/04-valley-notify.webp)
+
+*The valley plat, a themed notification, and a Hyprland Lua config open.*
+
+![Three editors over the headland plat](shots/05-headland-trio.webp)
+
+*Three editors over the headland plat — code, palette and window config.*
+
+![Floating config over the empty surveying plat](shots/06-blank-plat-float.webp)
+
+*A floating `shell.toml` over the empty surveying plat — the calmest surface in the set.*
 
 ## palette-check.png
 
