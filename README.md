@@ -120,7 +120,7 @@ The cool tokens do not need the same treatment: `cyan` and `blue` already sit ne
 ## What it ships
 
 - `colors.toml` — the entire theme.
-- `backgrounds/` — three wallpapers (below).
+- `backgrounds/` — nine wallpapers (below).
 - `preview.png` and `palette-check.png` — the images on this page.
 - `unlock.png` — the lock-screen wordmark, consumed as `logo.png` by the optional `lock-explorer` Plymouth plugin. Stock Omarchy ignores it.
 
@@ -137,10 +137,16 @@ One compositor value is themed: `hyprland_active_border`, a 45° sky-to-white gr
 | `backgrounds/1-drafting-grid.jpg` | Cyanotype grid sheet with a pavilion elevation and dimension lines in the lower right. The default wallpaper; it sorts first. |
 | `backgrounds/2-elevation.jpg` | White-line architectural elevation with dimension lines. |
 | `backgrounds/3-assembly.jpg` | Exploded mechanical detail — gears, brackets and bearings strung along leader axes. |
+| `backgrounds/4-plat-rolling-hills.webp` | Survey plat: undulating contour hills across the whole field, framed by the template border with a title-block strip. |
+| `backgrounds/5-plat-valley.webp` | Survey plat: a river valley — meandering stream, tight banded contours on the banks, wide rings on the flats. |
+| `backgrounds/6-plat-headland.webp` | Survey plat: coastal headland — two knolls, cliff-edge bands, and a shoreline curve. |
+| `backgrounds/7-plat-blank.jpg` | Empty surveying plat: template border, corner ticks and title block around a blank field — 98% of the ink sits on the border. |
+| `backgrounds/8-template-mechanical.jpg` | Empty mechanical plan sheet: border, title block, faint construction grid with three center-mark crosses. |
+| `backgrounds/9-template-detail.jpg` | Empty mechanical detail sheet: corner arcs, two blank view frames with center marks, title block. |
 
 Each wallpaper is drawn from the theme palette itself — the same Prussian blues and white line work as the desktop — so bars and terminals sit on them without contrast surprises.
 
-All three are 2912×1632 JPEGs, each kept light (capped at roughly 2 MB) — JPEG also keeps the halftone shading and paper grain smooth. Cycle between them with **Super+Ctrl+Space**. Your own images dropped into `~/.config/omarchy/backgrounds/blueprints/` appear alongside the shipped set.
+All nine are 2912×1632. The three contour plats carry the most line work and ship as WebP (0.5–0.7 MB each); the rest are JPEG at quality 95 with full chroma, which keeps the halftone shading and paper grain smooth. The set weighs about 10.5 MB in total — everyone who installs the theme clones all of it, so the heaviest scenes are the ones compressed. Cycle between them with **Super+Ctrl+Space**. Your own images dropped into `~/.config/omarchy/backgrounds/blueprints/` appear alongside the shipped set.
 
 ## palette-check.png
 
