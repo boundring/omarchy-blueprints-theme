@@ -42,7 +42,7 @@ omarchy theme set blueprints
 | `light_foreground` | `#cfe2f2` | Secondary text. |
 | `dark_foreground` | `#a9c7e2` | Tertiary text. |
 | `muted` | `#b0bbc6` | Comments and de-emphasis; ANSI 8. |
-| `accent` | `#7ad4f5` | Interactive accent; start color of the active window border. |
+| `accent` | `#58bdff` | Interactive accent; start color of the active window border. |
 | `selection` | `#1c5c9c` | Selection background; quiet against the canvas, high-contrast under white text. |
 | `red` | `#f5afab` | Chromatic; ANSI 1. |
 | `orange` | `#f7ba88` | Chromatic; editor numbers. |
@@ -58,9 +58,9 @@ omarchy theme set blueprints
 | `bright_cyan` | `#94dcf1` | Chromatic; ANSI 14. |
 | `bright_blue` | `#cad7f9` | Chromatic; ANSI 12. |
 | `bright_magenta` | `#eacaf7` | Chromatic; editor keywords; ANSI 13. |
-| `hyprland_active_border` | `rgba(7ad4f5ee) rgba(f2f8fdee) 45deg` | Active window border: 45° cyan-to-white gradient. |
+| `hyprland_active_border` | `rgba(58bdffee) rgba(f2f8fdee) 45deg` | Active window border: 45° sky-to-white gradient. |
 
-`accent` and `selection` complete the interactive pair: `accent` draws attention (borders, active elements), `selection` holds it (the region you dragged over).
+`accent` and `selection` complete the interactive pair: `accent` draws attention (borders, active elements), `selection` holds it (the region you dragged over). The accent is a deliberate step deeper than ANSI `cyan` — 5.47:1 against the canvas versus `cyan`'s 6.81:1 — so an active border or selected label never reads as a syntax token.
 
 ## Contrast
 
@@ -75,7 +75,7 @@ Read the table as guarantees: if you extend or restyle the palette, re-measure a
 | `light_foreground` | 8.53 | 7.13 |
 | `dark_foreground` | 6.45 | 5.39 |
 | `muted` | 5.81 | 4.85 |
-| `accent` | 6.78 | 5.66 |
+| `accent` | 5.47 | 4.57 |
 | `red` | 6.26 | 5.23 |
 | `orange` | 6.65 | 5.56 |
 | `yellow` | 7.80 | 6.52 |
@@ -91,7 +91,7 @@ Read the table as guarantees: if you extend or restyle the palette, re-measure a
 | `bright_blue` | 7.88 | 6.58 |
 | `bright_magenta` | 7.71 | 6.44 |
 
-Every chromatic token clears the WCAG AA threshold of 4.5:1 on both surfaces; the dimmest tokens in the set, `muted` (5.81 / 4.85) and `brown` (5.81 / 4.86), still sit a comfortable step above it. Body text clears 10:1 on the canvas. `lighter_background` is measured alongside `background` because floats, tooltips, and NeoVim's `NormalFloat` render on the raised surface — the surface most palettes forget to check, which is how popups end up washed out or illegible in otherwise careful themes.
+Every chromatic token clears the WCAG AA threshold of 4.5:1 on both surfaces; the dimmest chromatic, `brown` (5.81 / 4.86), and the de-emphasis gray `muted` (5.81 / 4.85), still sit a comfortable step above it. The accent is the one token tuned just inside that band on the raised surface (5.47 / 4.57), because depth is what separates it from ANSI `cyan`. Body text clears 10:1 on the canvas. `lighter_background` is measured alongside `background` because floats, tooltips, and NeoVim's `NormalFloat` render on the raised surface — the surface most palettes forget to check, which is how popups end up washed out or illegible in otherwise careful themes.
 
 The selection is verified in both directions: `selection` `#1c5c9c` sits 1.65:1 off the canvas — visible but quiet — while white text on it reaches 6.86:1. Inside a float the same selection drops to 1.38:1 against `lighter_background`; the white text on it is unchanged at 6.86:1. The surface steps themselves stay deliberately close, 1.20:1 between canvas and raised and 1.24:1 between canvas and the unfocused `dark_background` step, because panel boundaries in this theme are drawn by position and the accent border rather than by luminance jumps.
 
@@ -122,12 +122,13 @@ The cool tokens do not need the same treatment: `cyan` and `blue` already sit ne
 - `colors.toml` — the entire theme.
 - `backgrounds/` — three wallpapers (below).
 - `preview.png` and `palette-check.png` — the images on this page.
+- `unlock.png` — the lock-screen wordmark, consumed as `logo.png` by the optional `lock-explorer` Plymouth plugin. Stock Omarchy ignores it.
 
 Nothing in the repository executes on your machine: no `.lua`, no terminal configs (`alacritty.toml`, `foot.ini`, `ghostty.conf`, `kitty.conf`), no `vscode.json`. When `omarchy theme install` clones a theme it keeps only the color files, and Omarchy regenerates everything else from `colors.toml` — so those files are intentionally absent here.
 
 If you fork or restyle the theme, `colors.toml` is the only file to edit; `preview.png`, `palette-check.png`, and the backgrounds are rendered artifacts of it, and everything Omarchy generates downstream follows from it.
 
-One compositor value is themed: `hyprland_active_border`, a 45° cyan-to-white gradient (`rgba(7ad4f5ee) rgba(f2f8fdee) 45deg`) on the focused window. Window metrics — gaps, border size, rounding — are machine configuration in `~/.config/hypr/looknfeel.lua` and out of a theme's scope.
+One compositor value is themed: `hyprland_active_border`, a 45° sky-to-white gradient (`rgba(58bdffee) rgba(f2f8fdee) 45deg`) on the focused window. Window metrics — gaps, border size, rounding — are machine configuration in `~/.config/hypr/looknfeel.lua` and out of a theme's scope.
 
 ## Backgrounds
 

@@ -1,6 +1,6 @@
 mode = "dark"
 
-accent = "#7ad4f5"
+accent = "#58bdff"
 selection = "#1c5c9c"
 muted = "#b0bbc6"
 
@@ -30,4 +30,4 @@ bright_cyan = "#94dcf1"
 bright_blue = "#cad7f9"
 bright_magenta = "#eacaf7"
 
-hyprland_active_border = "rgba(7ad4f5ee) rgba(f2f8fdee) 45deg"
+hyprland_active_border = "rgba(58bdffee) rgba(f2f8fdee) 45deg"
