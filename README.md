@@ -11,7 +11,7 @@ Blueprints turns an Omarchy 4 desktop into an engineering cyanotype: deep Prussi
 From the Omarchy menu, follow **Install → Style → Themes** and pick **Blueprints**. From a terminal, the same thing is:
 
 ```sh
-omarchy theme install https://github.com/<account>/omarchy-blueprints-theme.git
+omarchy theme install https://github.com/boundring/omarchy-blueprints-theme.git
 omarchy theme set blueprints
 ```
 
