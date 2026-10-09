@@ -28,7 +28,7 @@ omarchy theme set blueprints
 
 ## Palette
 
-`mode` is `dark`; the twenty-six color keys below make up the rest of the theme, named by role rather than by terminal slot. Values are exactly what ships in `colors.toml`. `hyprland_active_border` is the only key that is not a hex — Hyprland gradient strings carry their own alpha values and angle.
+`mode` is `dark`; the twenty-five color keys plus the active-border gradient below make up the rest of the theme, named by role rather than by terminal slot. Values are exactly what ships in `colors.toml`. `hyprland_active_border` is the one key that is not a hex — Hyprland gradient strings carry their own alpha values and angle.
 
 | Key | Value | Role |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ Read the table as guarantees: if you extend or restyle the palette, re-measure a
 
 Every chromatic token clears the WCAG AA threshold of 4.5:1 on both surfaces; the dimmest tokens in the set, `muted` (5.81 / 4.85) and `brown` (5.81 / 4.86), still sit a comfortable step above it. Body text clears 10:1 on the canvas. `lighter_background` is measured alongside `background` because floats, tooltips, and NeoVim's `NormalFloat` render on the raised surface — the surface most palettes forget to check, which is how popups end up washed out or illegible in otherwise careful themes.
 
-The selection is verified in both directions: `selection` `#1c5c9c` sits 1.65:1 off the canvas — visible but quiet — while white text on it reaches 6.86:1. The surface steps themselves stay deliberately close, 1.20:1 between canvas and raised and 1.24:1 between canvas and the unfocused `dark_background` step, because panel boundaries in this theme are drawn by position and the accent border rather than by luminance jumps.
+The selection is verified in both directions: `selection` `#1c5c9c` sits 1.65:1 off the canvas — visible but quiet — while white text on it reaches 6.86:1. Inside a float the same selection drops to 1.38:1 against `lighter_background`; the white text on it is unchanged at 6.86:1. The surface steps themselves stay deliberately close, 1.20:1 between canvas and raised and 1.24:1 between canvas and the unfocused `dark_background` step, because panel boundaries in this theme are drawn by position and the accent border rather than by luminance jumps.
 
 ## Design
 
@@ -133,9 +133,9 @@ One compositor value is themed: `hyprland_active_border`, a 45° cyan-to-white g
 
 | File | Scene |
 | --- | --- |
-| `backgrounds/1-drafting-grid.jpg` | Cyanotype grid sheet with quiet elevation lines. The default wallpaper; it sorts first. |
+| `backgrounds/1-drafting-grid.jpg` | Cyanotype grid sheet with a pavilion elevation and dimension lines in the lower right. The default wallpaper; it sorts first. |
 | `backgrounds/2-elevation.jpg` | White-line architectural elevation with dimension lines. |
-| `backgrounds/3-assembly.jpg` | Exploded mechanical detail rendered in halftone. |
+| `backgrounds/3-assembly.jpg` | Exploded mechanical detail — gears, brackets and bearings strung along leader axes. |
 
 Each wallpaper is drawn from the theme palette itself — the same Prussian blues and white line work as the desktop — so bars and terminals sit on them without contrast surprises.
 
